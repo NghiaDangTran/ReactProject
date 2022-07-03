@@ -52,7 +52,7 @@ function Update(props) {
             "price": values.Price,
         }
 
-        fetch('http://study.imic.edu.vn/api/product/add', {
+        fetch('http://study.imic.edu.vn/api/product/update', {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
