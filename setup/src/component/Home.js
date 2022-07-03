@@ -58,10 +58,15 @@ function Home(props) {
             behavior: 'smooth' // for smoothly scrolling
         });
     };
+    const search = (e) => {
+        const value = e.target.value;
+        setkeyWord(value)
+    }
 
-    
     return (
         <div className="container">
+            Search: <input onInput={(e) => search(e)} />
+
             <div className="row gx-03 justify-content-evenly">
                 {display()
                 }

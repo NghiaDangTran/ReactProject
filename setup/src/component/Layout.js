@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Home';
 import { Link, Routes, Route } from 'react-router-dom'
 import ProductDetail from './ProductDetail';
+import Update from './Update'
 import New from './New'
 
 function Layout(props) {
@@ -16,8 +17,8 @@ function Layout(props) {
                 <Route path='/them-san-pham' element={<New></New>} ></Route>
                 
                 <Route path='/chi-tiet-san-pham/:id' element={<ProductDetail></ProductDetail>} ></Route>
+                <Route path='/update-sanpham/:id' element={<Update></Update>} ></Route>
 
-                {/* <Route path='/chi-tiet-san-pham/:id' element={} ></Route> */}
             </Routes>
 
 

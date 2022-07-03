@@ -1,13 +1,27 @@
 import React, { isValidElement, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useNavigate  } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import * as yup from 'yup'
-function New(props) {
-    const navigate = useNavigate();
-   
+import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { rqGetProductId } from '../actions/product'
 
+function Update(props) {
+    let currId = window.location.pathname.split("/")[2]
+
+    const navigate = useNavigate();
+
+    useEffect(
+        () => {
+            const action = rqGetProductId(currId);
+            dispatch(action)
+
+        }, []
+    )
+    const dispatch = useDispatch()
+    const productDetail = useSelector(state => state.product.productDetail)
+    console.log(productDetail)
     const [sample, setSample] = useState(<div className="card" style={{ width: '30rem' }}>
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" className="card-img-top" alt="..." />
         <div className="card-body">
@@ -20,7 +34,7 @@ function New(props) {
 
 
 
-    
+
     const requiredMessage = 'Bạn phải nhập trường này'
     const schema = yup.object({
         ProductName: yup.string().required(requiredMessage),
@@ -31,14 +45,15 @@ function New(props) {
     const { register, handleSubmit, formState: { errors, isValid } } = useForm({ resolver: yupResolver(schema) });
     const onSubmit = (values) => {
         let data = {
+            "productId": currId,
             "productName": values.ProductName,
             "image": values.Image,
             "content": values.Content,
             "price": values.Price,
         }
-        
+
         fetch('http://study.imic.edu.vn/api/product/add', {
-            method: 'post',
+            method: 'put',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -48,7 +63,7 @@ function New(props) {
             .then(s => s.json())
             .then((data) => {
 
-                if(data && data.statusCode === 200) {
+                if (data && data.statusCode === 200) {
                     navigate('/');
                 }
             })
@@ -82,6 +97,7 @@ function New(props) {
                             className="form-control"
                             name="ProductName"
                             placeholder="Ten san pham"
+                            defaultValue={productDetail.productName}
                             {...register('ProductName')}
 
                         />
@@ -95,6 +111,7 @@ function New(props) {
                             className="form-control"
                             name="Image"
                             placeholder="hinh anh san pham"
+                            defaultValue={productDetail.image}
                             {...register('Image')}
                         />
                         <small className="form-text text-muted">{errors.Image?.message}</small>
@@ -106,6 +123,7 @@ function New(props) {
                             className="form-control"
                             name="Price"
                             placeholder="gia san pham"
+                            defaultValue={productDetail.price }
                             {...register('Price')}
 
                         />
@@ -118,6 +136,7 @@ function New(props) {
                             className="form-control"
                             name="Content"
                             placeholder="Ten san pham"
+                            defaultValue={ productDetail.content}
                             {...register('Content')}
 
                         />
@@ -136,4 +155,4 @@ function New(props) {
     );
 }
 
-export default New;
+export default Update;

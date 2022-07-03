@@ -32,10 +32,10 @@ function ProductDetail(props) {
 
             <div className="card" style={{ width: '30rem' }}>
                 <img src={productDetail.image} className="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">{productDetail.productName}</h5>
-                    <h6 class="card-title">Price: ${productDetail.price}</h6>
-                    <p class="card-text">{productDetail.content}</p>
+                <div className="card-body">
+                    <h5 className="card-title">{productDetail.productName}</h5>
+                    <h6 className="card-title">Price: ${productDetail.price}</h6>
+                    <p className="card-text">{productDetail.content}</p>
 
                 </div>
             </div>

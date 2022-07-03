@@ -17,8 +17,8 @@ function Card(props) {
 
     }
 
-    if (product===null)
-    return (<></>);
+    if (product === null)
+        return (<></>);
     return (
 
         <div className="col-lg-4 col-md-12">
@@ -33,7 +33,7 @@ function Card(props) {
 
                     {/* link to delete product */}
                     <button onClick={() => addDel(product.productId)} className="btn btn-primary" style={{ width: '5rem' }}>Delete</button>
-                    {/* <Link to="/products" className="btn">backto product</Link> */}
+                    <Link to={`/update-sanpham/${product.productId} `} className="btn btn-primary " style={{ width: '5rem' }}>Update</Link>
 
                 </div>
 
