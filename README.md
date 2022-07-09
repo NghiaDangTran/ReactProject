@@ -19,3 +19,8 @@ https://user-images.githubusercontent.com/33323750/177675247-aa68d856-39b7-4816-
 
 https://user-images.githubusercontent.com/33323750/177675298-e92b8a5f-08ff-4182-b87e-b9fdbbe5f862.mp4
 
+# project 7 lorem ipsum generator
+
+
+https://user-images.githubusercontent.com/33323750/178090393-9a2efb65-afe7-46ec-9464-ba90f6ae8c58.mp4
+
