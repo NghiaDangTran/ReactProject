@@ -24,3 +24,8 @@ https://user-images.githubusercontent.com/33323750/177675298-e92b8a5f-08ff-4182-
 
 https://user-images.githubusercontent.com/33323750/178090393-9a2efb65-afe7-46ec-9464-ba90f6ae8c58.mp4
 
+# project 8 color generator
+
+
+https://user-images.githubusercontent.com/33323750/178128278-c42ef9cd-e30c-46f1-b997-64f269344496.mp4
+
