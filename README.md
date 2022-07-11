@@ -29,3 +29,8 @@ https://user-images.githubusercontent.com/33323750/178090393-9a2efb65-afe7-46ec-
 
 https://user-images.githubusercontent.com/33323750/178128278-c42ef9cd-e30c-46f1-b997-64f269344496.mp4
 
+# project 9 shopping list
+
+
+https://user-images.githubusercontent.com/33323750/178172186-717e2257-c4a7-4f8b-ba53-0c8fd068a856.mp4
+
