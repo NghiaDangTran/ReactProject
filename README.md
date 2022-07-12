@@ -42,5 +42,10 @@ https://user-images.githubusercontent.com/33323750/178386924-fa2e47de-f864-4456-
 
 
 https://user-images.githubusercontent.com/33323750/178394999-f7df5629-f82e-4321-83f4-bb5ea9bad23d.mp4
+# project 12 strip menu
+
+
+https://user-images.githubusercontent.com/33323750/178605228-c92921cd-7fbb-4872-8b3b-698d0ad831d2.mp4
+
 
 
